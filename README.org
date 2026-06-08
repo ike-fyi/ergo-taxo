@@ -57,11 +57,11 @@ Temporal values scale from broad to narrow. Standard is just using YYYYMMDD.
 ** Placement Strategy & Examples
 
 - *Trailing position: For versioning or collaboration:* Appended at the very end of the file title block. Best for living documents where the date acts as a version control mechanism and the name.
-  ~client-alpha-proposal--20260608.pdf~
-  ~system-auth-log--20260608--1246--UTC.log~
+  ~client-alpha-proposal---20260608.pdf~
+  ~system-auth-log---20260608--1246--UTC.log~
 
 - *Leading Position (Archive):* Placed at the very beginning of the title block. Best for permanent, immutable storage (like flat media vaults or journaling) where files must sort chronologically by default.
-  ~20260202--indue-vault-diagram.png~
+  ~20260202---indue-vault-diagram.png~
 
 - *No date:* For file sharing or presentation, including a date can seem cluttered and ugly.
   ~ergo-case---the-full-documentation~
@@ -90,10 +90,10 @@ Structural walls (~..~) can divide categories, projects, or even temporal blocks
 
 * Combined Master Syntax
 
-When all three modules are combined, they create a complete, self-sorting file asset.
+When all three modules are combined, they create a complete, self-sorting file asset. Below is an /extreme/ example that would probably only be created by an automated program that organized its files without folders and needed dates for 2 different reasons (versioning and archive sorting).
 
 #+BEGIN_SRC text
-category..sub-category..YYYYMMDD--title-or-item--metadata---sub-attribute--YYYYMMDD--HHmm.ext
+category..sub-category..YYYYMMDD---the-title--sub-title---sub-sub-title---YYYYMMDD--HHmm.ext
 #+END_SRC
 
 * Technical Performance & Ecosystem Behavior
