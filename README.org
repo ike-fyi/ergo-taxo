@@ -28,7 +28,7 @@ The layout relies strictly on the primary keys of a standard keyboard layout, re
 
 ** Capitalization
 
-*ergo-case* was designed sepcifically to avoid the need for the shift key. It does not at all consider or banish the use of capitalization. Standard ergo-case is all lower case, but you can also choose to use capital letters freely without breaking my personal blessing. You will be judged by the auther of ergo-case (me) though, despite that they have no way to be omnipresent and knowledgable in your ways, and despite the fact that they (I) will definitely do this myself occasionally. 
+*ergo-case* was designed sepcifically to avoid the need for the shift key. It does not at all consider or banish the use of capitalization. Standard ergo-case is all lower case, but you can also choose to use capital letters freely without breaking my personal blessing. You will be judged by the auther of ergo-case (me) though, despite that they have no way to be omnipresent and knowledgable in your ways, and despite the fact that they (I) will definitely do it too occasionally. 
 
 ** Basic ~ergo-case~ examples
 *** File Names (Primary considered use-case)
