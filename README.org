@@ -12,7 +12,7 @@ The system prioritizes human readability and is built on three distinct, modular
 2. *Ergo Time (The Temporal Module):* Standardizes chronological metadata and file versioning. Basically ISO YYMMDD plus added artistic license
 3. *Ergo Taxo (The Structural Module):* Replaces folder nesting with a flat-tree double-dot delimiter.
 
-* 1. ~ergo-case~ Like kebab-case but MOAR
+* ~ergo-case~ Like kebab-case but MOAR
 
 ~ergo-case~ is an elastic and expressive variant of standard ~kebab-case~ that introduces *Semantic Distance* (ooooh brainy term).
 
@@ -43,7 +43,7 @@ The layout relies strictly on the primary keys of a standard keyboard layout, re
 - ~Stephen-King---Super-Stephen--Renegade.epub~
 - Program language where constants use capital-ergo like ~CONSTANT-NAME-EXAMPLE~
 
-* 2. Ergo Time: File naming temporal signatures & versioning
+* ~ergo-time~: File naming temporal signatures
 
 Including a date in filenames is highly recommended for interoperability in the case of long term archiving, or versioning/collaboration situations. Temporal signatures use concatenated numeric strings. When combined purely with Ergo Case, they create self-sorting, collision-free files.
 
@@ -69,9 +69,9 @@ Temporal values scale from broad to narrow. Standrd is jut YYYYMMDD
 - *No date:* For file sharing or presentation including a date can seem cluttered and ugly.
   ~ergo-case---the-full-documentation
 
-* 3. Ergo Taxo: Flat-Tree Architecture
+* ~ergo-taxo~: Adding hierachy information in filenames
 
-The final layer of the system eliminates the need for nested folders by embedding the structural path directly into the filename. By introducing the ~..~ (Double Dot) as the macro structural separator, files stored in a single flat folder automatically group and cluster.
+The final layer of the system eliminates the need for nested folders by embedding the structural path directly into the filename. By introducing the ~..~ (Double Dot) as the macro structural separator, files stored in a single flat folder automatically group and cluster. Putting things in flat directories is not a recommended general convention. However sometimes a hierarchal structure can be helpful when files need to be in a flat directory for logic or performance reasons.
 
 - The use of ~..~ is an intentional visual nod to the command line "parent directory" metaphor.
 - Operating systems parse dot sequences sequentially, prioritizing them before alphabetical letters, ensuring clean visual clustering.
