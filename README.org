@@ -14,7 +14,7 @@ The system prioritizes human readability and is built on three distinct, modular
 
 * 1. ~ergo-case~ Like kebab-case but MOAR
 
-~ergo-case~ is an elastic variant of standard ~kebab-case~ that introduces *Semantic Distance*.
+~ergo-case~ is an elastic and expressive variant of standard ~kebab-case~ that introduces *Semantic Distance* (ooooh brainy term).
 
 While a single ~-~ character is a standard space, repeating - characters in a row denote conceptual distance. They are designed for high readability, allowing the human eye to subconsciously recognize the next word as slightly distanced without needing to stop and count characters.
 
@@ -28,27 +28,28 @@ The layout relies strictly on the primary keys of a standard keyboard layout, re
 
 ** Capitalization
 
-*ergo-case* was designed sepcifically to avoid the need for the shift key does not consider or banish the use of capitalization. Standard ergo-case is all lower case, but you can also choose to use capital letters freely without explicitly breaking ergo-case. 
+*ergo-case* was designed sepcifically to avoid the need for the shift key. It does not at all consider or banish the use of capitalization. Standard ergo-case is all lower case, but you can also choose to use capital letters freely without breaking my personal blessing. You will be judged by the auther of ergo-case (me) though, despite that they have no way to be omnipresent and knowledgable in your ways, and despite the fact that they (I) will definitely do this myself occasionally. 
 
 ** Basic ~ergo-case~ examples
-*** File Names
+*** File Names (Primary considered use-case)
 - ~national-terrorist-strike-force--san-diego---sport-utility-vehicle.mp4~
 - ~web-proposal--version-two---final-draft.pdf~
 
-*** Designing a programming language
-- Variable named book--stephen-king---new
-- Function named get--all-employees
+*** Designing a neew programming or mark-up language
+- Make variables use ergo-case: ~book--stephen-king---new~
+- Make functions use ergo-case: ~get--all-employees~
 
-** Blasphemous but /judgingly/ accepted use of sentence case hybrid (jk)
-- Stephen-King---Super-Stephen--Renegade.epub
+** Blasphemous but /judgingly/ accepted (by the author) use of sentence case hybrid (jk)
+- ~Stephen-King---Super-Stephen--Renegade.epub~
+- Program language where constants use capital-ergo like ~CONSTANT-NAME-EXAMPLE~
 
-* 2. Ergo Time: Temporal signatures & versioning
+* 2. Ergo Time: File naming temporal signatures & versioning
 
-Including a date is highly recommended for interoperability in the case of long term archival or versioning situations. Temporal signatures use concatenated numeric strings. When combined purely with Ergo Case, they create self-sorting, collision-free files.
+Including a date in filenames is highly recommended for interoperability in the case of long term archiving, or versioning/collaboration situations. Temporal signatures use concatenated numeric strings. When combined purely with Ergo Case, they create self-sorting, collision-free files.
 
 ** Formatting rules
 
-Temporal values scale from broad to narrow.
+Temporal values scale from broad to narrow. Standrd is jut YYYYMMDD
 - *Year:* Formatted as ~YYYY~. Always listed first if needed.
 - *Month:* Formatted as ~MM~. Always follows the year.
 - *Day:* Formatted as ~DD~. Always follows the month. Never used alone without a month.
@@ -58,12 +59,15 @@ Temporal values scale from broad to narrow.
 
 ** Placement Strategy & Examples
 
-- *Trailing position: For versioning:* Appended at the very end of the file title block. Best for living documents where the date acts as a version control mechanism and the name.
+- *Trailing position: For versioning or collaboration:* Appended at the very end of the file title block. Best for living documents where the date acts as a version control mechanism and the name.
   ~client-alpha-proposal--20260608.pdf~
   ~system-auth-log--20260608--1246--UTC.log~
 
-- *Leading Position (Archive):* Placed at the very beginning of the title block. Best for permanent, immutable storage (like image vaults or journaling) where files must sort chronologically by default.
+- *Leading Position (Archive):* Placed at the very beginning of the title block. Best for permanent, immutable storage (like flat media vaults or journaling) where files must sort chronologically by default.
   ~20260202--indue-vault-diagram.png~
+
+- *No date:* For file sharing or presentation including a date can seem cluttered and ugly.
+  ~ergo-case---the-full-documentation
 
 * 3. Ergo Taxo: Flat-Tree Architecture
 
