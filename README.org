@@ -1,0 +1,128 @@
+#+TITLE: Ergo Taxo Specification
+#+AUTHOR: Systems Design Reference
+#+DATE: [2026-06-08 Mon]
+#+OPTIONS: toc:2 num:t
+
+* Core Philosophy
+  Traditional hierarchical file structures rely on nested folders, while traditional 
+  naming conventions (such as ~kebab-case~ or ~snake_case~) were engineered strictly 
+  for flat programming variables. When combined on local file systems, they force 
+  users into deep directory trees or long, undistinguishable strings of text.
+
+  *Ergo Taxo* resolves this conflict. It is an overarching file and naming protocol 
+  designed entirely around shift-free, ergonomic keyboard entry. 
+
+  The system prioritizes human readability and is built on three distinct, modular components. 
+  They are listed in order of common utility:
+  1. *Ergo Case (The Casing Module):* Replaces the spacebar with an elastic, semantic hyphen system.
+  2. *Ergo Time (The Temporal Module):* Standardizes chronological metadata and file versioning.
+  3. *Ergo Taxo (The Structural Module):* Replaces folder nesting with a flat-tree double-dot delimiter.
+
+* 1. Ergo Case: Semantic Distance Casing
+  Ergo Case is the foundational typographic engine of the protocol. It is an elastic variant 
+  of standard ~kebab-case~ that introduces *Semantic Distance*. 
+
+  Instead of a rigid structure, repeating characters denote conceptual distance. 
+  They are designed for high readability, allowing the human eye to subconsciously 
+  recognize the next word as slightly distanced without needing to stop and count characters. 
+
+  The layout relies strictly on the primary keys located in the bottom-right region 
+  of a standard keyboard layout, requiring zero use of the Shift key.
+
+  | Separator | Component Type  | Visual Meaning     | Technical / OS Function                    |
+  |-----------+-----------------+--------------------+--------------------------------------------|
+  | ~no space~| Character Lock  | Unified word string| Standard text block                        |
+  | ~-~       | Word Space      | Micro-distance     | Replaces the spacebar within a concept     |
+  | ~--~      | Metadata Break  | Medium-distance    | Acts like a comma/colon structural checkpoint|
+  | ~---~     | Attribute Tie   | Long-distance      | Appends a trailing sub-thought or variant  |
+
+** Basic Ergo Case Examples
+   - ~national-terrorist-strike-force--san-diego---sport-utility-vehicle.mp4~
+   - ~web-proposal--version-two---final-draft.pdf~
+
+* 2. Ergo Time: Temporal Signatures & Versioning
+  Including a date is highly recommended for interoperability. Temporal signatures 
+  use concatenated numeric strings. When combined purely with Ergo Case, they create 
+  self-sorting, collision-free files.
+
+** Formatting Rules
+   Temporal values scale from broad to narrow.
+   - *Year:* Formatted as ~YYYY~. Always listed first if needed.
+   - *Month:* Formatted as ~MM~. Always follows the year.
+   - *Day:* Formatted as ~DD~. Always follows the month. Never used alone without a month.
+   - *Time / Versioning:* Separated from the date by a Medium-distance break (~--~). Formatted as ~HH~ or ~hh~.
+   - *Granular Time:* Minutes (~mm~) follow the hour. Seconds (~ss~) follow the minutes.
+   - *Timezone (Optional/Niche):* If cross-region specificity is required, separated by a Medium-distance break (~--~) at the very end of the temporal string. Format communicates the context (e.g., ~UTC~, ~Z~, ~CDT~).
+
+** Placement Strategy & Examples
+   - *Trailing Position (Standard):* Appended at the very end of the file title block. Best for living documents where the date acts as a version control mechanism.
+     ~client-alpha-proposal--20260608.pdf~
+     ~system-auth-log--20260608--1246--UTC.log~
+
+   - *Leading Position (Archive):* Placed at the very beginning of the title block. Best for permanent, immutable storage (like image vaults or journaling) where files must sort chronologically by default.
+     ~20260202--indue-vault-diagram.png~
+
+* 3. Ergo Taxo: Flat-Tree Architecture
+  The final layer of the system eliminates the need for nested folders by embedding 
+  the structural path directly into the filename. By introducing the **~..~ (Double Dot)** as the macro structural separator, files stored in a single flat folder automatically group and cluster.
+
+  - The use of ~..~ is an intentional visual nod to the command line "parent directory" metaphor.
+  - Operating systems parse dot sequences sequentially, prioritizing them before alphabetical letters, ensuring clean visual clustering.
+
+** Integrating Structure with Ergo Time
+   Structural walls (~..~) can divide categories, projects, or even temporal blocks like years. 
+   Depending on your sorting needs, Ergo Time signatures can be placed at the beginning or end of these specific title segments.
+
+   - *Year as a Directory Division:*
+     ~finance..2026..tax-records--q2-receipts.xlsx~
+   
+   - *Standard Asset within a Hierarchy:*
+     ~projects..tyke..gauntlet-emblem--version-two--20260315.png~
+
+   - *Extreme Dual-Positioning Archive:*
+     Used when an asset exists within a chronologically sorted archive but still requires specific version targeting.
+     ~photos..2026..0202--at-the-beach--20260202--0930.jpg~
+     /(Creates a "photos" directory tier, a "2026" sub-tier, sorts the file to February 2nd, names the file, and versions it to 9:30 AM)/
+
+* Combined Master Syntax
+  When all three modules are combined, they create a complete, self-sorting file asset.
+
+  #+BEGIN_SRC text
+  category..sub-category..YYYYMMDD--title-or-item--metadata---sub-attribute--YYYYMMDD--HHmm.ext
+  #+END_SRC
+
+* Technical Performance & Ecosystem Behavior
+
+** Command-Line Interface (CLI) Optimization
+   - *Tab-Completion:* Initiating a path with the structural boundary (e.g., ~cd projects..~) restricts the shell search horizon to that precise tier.
+   - *Deterministic Tokenization:* Automation scripts can cleanly split an asset into distinct database arrays: ~.Split('..')~ isolates the directory tiers, while ~.Split('--')~ extracts metadata fields.
+   - *Zero Quoting:* Because the spacebar is entirely avoided, users can pipe or move files natively without double quotes.
+
+** Graceful Degradation on the Web
+   Web Content Management Systems routinely scrub filenames to produce clean URL slugs. 
+   Ergo Case handles this natively and degrades no worse than any other naming convention.
+   
+   Standard sanitization algorithms are designed to treat sequential special characters 
+   as a single block. Under standard slugification rules, ~---~ and ~--~ simply compress 
+   down to a single ~-~ word space.
+   
+   - *Local Master Layout:* ~category..title-text--metadata--20260608.ext~
+   - *Web Collapsed Output:* ~category.title-text-metadata-20260608.ext~
+
+   Because the system builds on repeating safe characters instead of introducing obscure symbols, it acts like a pre-slugged string.
+
+* Style Conventions
+
+** Lowercase Baseline
+   All letters are typed lowercase as a primary system feature to maintain fluid, 
+   shift-free operation. This is an ergonomic priority rather than a hard machine limit.
+
+** Stylistic Capitalization
+   If an asset requires formal editorial presentation, sentence-style capitalization is 
+   fully permitted. Command-line tokenizers will continue to parse data cleanly based 
+   strictly on delimiter counts.
+
+** Extension Boundary Rule
+   To secure operating system file-type validation, the final temporal or metadata block must 
+   never end with a trailing dash or structural dot right before the extension (e.g., 
+   use ~--20260608.pdf~; do not use ~--20260608-.pdf~ or ~--20260608..pdf~).
