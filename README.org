@@ -23,7 +23,7 @@ A single ~-~ is a word space. Repeating the dash widens the gap, and the eye rea
 |-----------+-------------------------+---------------------------------------------|
 | ~-~       | word space              | an ordinary space                            |
 | ~--~      | conceptual break        | a comma or colon; a structural checkpoint    |
-| ~---  (+)~     | deeper conceptual break | a dash or colon at a higher level; a big semantic leap |
+| ~---~     | deeper conceptual break | a dash or colon at a higher level; a big semantic leap |
 
 Usage is expressive rather than mechanical: ~--~ and ~---~ are degrees of distance, and which one a boundary deserves is the author's call. The syntax is strict so machines can parse it; the semantics are elastic so humans can phrase with it.
 
@@ -101,9 +101,9 @@ Dates in filenames are recommended for archiving, versioning, and collaboration.
 ** Format rules
 
 - *Date:* always ~YYYYMMDD~. Never ~YYMMDD~: a 6-digit date is indistinguishable from a 6-digit ~hhmmss~ and stops sorting correctly across centuries.
-- *Time:* appended directly to the date with a lowercase ~t~, ISO basic style: ~20260608t1246~. Seconds extend it: ~t124659~. The whole timestamp is one atomic token.
+- *Time:* appended directly to the date with a lowercase ~t~, ISO basic style: ~20260608t1246~. Seconds extend it: ~t124659~. The whole timestamp is one atomic token. Many may use this for versioning instead fo a separate version number. 
 - *Timezone:* ~z~ for UTC (~20260608t1246z~), or omit for local time. Numeric offsets are not used: ~+~ needs Shift and ~-~ collides with the word space.
-- *Versions:* ~v~ plus zero-padded digits (~v02~, not ~v2~); otherwise ~v10~ sorts before ~v2~ and breaks self-sorting.
+- *Versions:* ~v~ plus zero-padded digits (~v02~, not ~v2~); otherwise ~v10~ sorts before ~v2~ and breaks self-sorting. Version nummbers mayb not be needed if you use time in the filename AS versioning. the main benefit to versions is that the version # will be placed before the date, so if you need to work on a version as a milestone that may have several sub versions via the date, you can.
 
 ** Placement
 
@@ -175,8 +175,7 @@ morse-case is a restoration, not an invention. Separation length carrying meanin
 * Style conventions, consolidated
 
 1. Lowercase baseline; stylistic capitalization permitted under the author's distant, theoretical judgment.
-2. One to three dashes only; four or more is a syntax error.
-3. Dots mark tiers; one dot is canonical, more dots are visual emphasis with identical meaning; dots never touch a dash, never lead.
-4. Titles contain no dots.
-5. Dates are ~YYYYMMDD~; times use lowercase ~t~; UTC is ~z~; versions are zero-padded.
-6. *Extension boundary rule:* the name never ends in a dash or extra dot before the extension, and the extension dot is always exactly one. Use ~--20260608.pdf~; never ~--20260608-.pdf~ or ~--20260608..pdf~.
+2. Dots mark tiers; one dot is canonical, more dots are visual emphasis with identical meaning; dots never touch a dash, never lead.
+3. Titles or unified segment contain no dots.
+4. Dates are ~YYYYMMDD~; times use lowercase ~t~; UTC is ~z~; versions are zero-padded.
+5. *Extension boundary rule:* the name never ends in a dash or extra dot before the extension, and the extension dot is always exactly one. Use ~--20260608.pdf~; never ~--20260608-.pdf~ or ~--20260608..pdf~.
