@@ -28,16 +28,26 @@ A single ~-~ is a word space. Repeating the dash widens the gap, and the eye rea
 Four or more consecutive dashes are forbidden. Within the three rungs, usage is expressive rather than mechanical: ~--~ and ~---~ are degrees of distance, and which one a boundary deserves is the author's call. The syntax is strict so machines can parse it; the semantics are elastic so humans can phrase with it.
 
 #+BEGIN_EXAMPLE
-stephen-king---book-of-dust-3--the-reckoning.epub
+italo-calvino---our-ancestors-02--the-baron-in-the-trees.epub
 #+END_EXAMPLE
 
-Here ~---~ separates the author from the work — a conceptual division — while ~--~ attaches the subtitle to the title. Both breaks live inside one title; neither is hierarchy. Different degrees of distance are simply part of how a name is phrased.
+Here ~---~ separates the author from the work — a huge concept break — while ~--~ attaches the individual title to its series and number. Both breaks live inside one title; neither is hierarchy. Different degrees of distance are simply part of how a name is phrased.
+
+** Expressive, not strict
+
+morse-case is a flexible, expressive system; it does not replace strict categorization standards, and the rungs encode /contrast/, not absolute levels. A ~---~ in one filename is not the same size of jump as a ~---~ in another. In the example above it marks a huge concept break, but a name with no huge break in it can still use both rungs the way a writer uses a colon and a dash together — two jumps of similar magnitude, marked differently to record that the breaks, even if equal in distance, /were/ different in kind:
+
+#+BEGIN_EXAMPLE
+field-recordings--marsh-birds---dawn-takes.flac
+#+END_EXAMPLE
+
+Neither jump dwarfs the other here: the ~--~ reads like a colon introducing the subject, the ~---~ like a dash setting off an aside. The change of rung is contrast within this one name, nothing more. What a rung means is settled inside each filename, by its author, at the moment of phrasing.
 
 ** Basic examples
-- ~phillip-pullman---the-book-of-dust--volume-3---the-rose-field.epub~
-- ~national-terrorist-strike-force--san-diego--sport-utility-vehicle.mp4~
+
+- ~national-terrorist-strike-force--san-diego---sport-utility-vehicle.mp4~
 - ~web-proposal--version-two---final-draft.pdf~
-- Variables in a new language: ~book---cormac-mccarthy--the-road---new~
+- Variables in a new language: ~book--stephen-king---new~
 - Functions: ~get--all-employees~
 
 ** Casing rules
@@ -46,7 +56,8 @@ Here ~---~ separates the author from the work — a conceptual division — whil
 
 *Stylistic capitalization.* Capital letters may be used freely without breaking the convention's blessing. You will be judged by the author of morse-case (me), despite the author having no way to be omnipresent and knowledgeable in your ways, and despite the fact that the author will definitely do it too occasionally.
 
-- ~Stephen-King---Super-Boy-Stephen--The-Return.epub~
+- ~Stephen-King---Super-Stephen--Renegade.epub~
+- Constants in a programming language: ~CONSTANT-NAME-EXAMPLE~
 
 * Extension: structural tiers
 
@@ -115,7 +126,7 @@ Dates in filenames are recommended for archiving, versioning, and collaboration.
 (Spaces above are illustrative only.) The leading-date archive form swaps the timestamp to the front of the title block. A maximal example:
 
 #+BEGIN_EXAMPLE
-projects.tyke.gauntlet-emblem--concept-art---approved--v02--20260315.png
+projects.indue-markup.gauntlet-emblem--concept-art---approved--v02--20260315.png
 #+END_EXAMPLE
 
 * Parsing and machine behavior
