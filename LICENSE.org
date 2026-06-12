@@ -1,10 +1,10 @@
-#+TITLE: ergo-name: Naming Convention Status & License
+#+TITLE: morse-case: Naming Convention Status & License
 #+AUTHOR: Isaac Ah-Loe
 #+DATE: 2026
 
 * Naming Convention Status
 
-The *ergo-name* naming convention, including *ergo-case*, is a conceptual design standard and resides in the public domain. 
+The *morse-case* naming convention, including *morse-case*, is a conceptual design standard and resides in the public domain. 
 
 The specific documentation, text expressions, and code examples contained within this repository are protected from liability under the MIT-0 License below.
 
